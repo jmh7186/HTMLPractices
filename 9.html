@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px solid red;
+        }
+        h1{
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <h1>태그는 상위 태그에 상속된다.</h1>
+    <div>
+        <h1 style="display: block;">padding의 상태를 확인</h1>
+        <!-- block은 padding의 top, bottom의 간격을 유지한다 -->
+    </div>
+    <p></p>
+    <div>
+        <h1 style="display: inline;">padding의 상태를 확인</h1>
+        <h1 style="display: inline;">padding의 상태를 확인</h1>
+        <!-- inline 속성은 padding이 0의 값을 가지게 한다. -->
+    </div>
+    <p></p>
+    <div>
+        <h1 style="display: inline-block;">First Head</h1>
+        <h1 style="display: inline-block;">Second Head</h1>
+        <!-- inline-block 속성은 상하 간격은 유지(block), 좌우 간격은 0(inline)이다. -->
+    </div>
+    <p></p>
+    <div style="display: inline;">
+        <h1 style="display: block;">First Head</h1>
+        <h1 style="display: block;">Second Head</h1>
+    </div>
+    <p style="display: inline;">1234</p>
+    <p></p>
+    <div style="display: flex;">
+        <h1>First Head</h1>
+        <h1>Second Head</h1>
+        <!-- flex는 하위 태그가 block 속성이어도 inline속성으로 바꾼다. -->
+    </div>
+    <p></p>
+    <div style="display: flexbox;">
+        <h1>First Head</h1>
+        <h1>Second Head</h1>
+        <a>First Head</a>
+        <a>Second Head</a>
+        <!-- flexbox는 하위 태그의 속성을 그대로 적용한다. -->
+    </div>
+    
+</body>
+</html>

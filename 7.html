@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴</title>
+    <style>
+        *{
+            margin:0 auto; padding:0;
+        }
+        div{
+            border: 2px solid red;
+        }
+        ul{
+            border: 2px solid orange;
+            list-style: none;
+            display: flex;  /* 디스플레이는 하위 태그에 영향을 미침 */
+        }
+        li{
+            border: 2px solid green;
+            padding: 60px 30px;
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+        }
+        li:hover {
+            background-color: darkgray;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Menu1</li>
+            <li>Menu2</li>
+            <li>Menu3</li>
+            <li>Menu4</li>
+        </ul>
+    </div>
+</body>
+</html>
