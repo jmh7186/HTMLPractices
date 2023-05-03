@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴</title>
+    <style>
+        *{
+            margin:0 auto; padding:0;
+        }
+        div{
+            /* border: 2px solid red; */
+            overflow: hidden;
+        }
+        ul{
+            /* border: 2px solid orange; */
+            list-style: inside;
+            display: block;                  /* 디스플레이는 하위 태그에 영향을 미침 */
+            align-items: center;
+            overflow: hidden;
+        }
+        li{
+            /* border: 2px solid green; */
+            padding: 50px 50px;
+            
+            text-align: center;
+            font-size: 30px;
+        }
+        li:hover {
+            background-color: rgb(209, 209, 209);
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li style="color: cornflowerblue; position: fixed; top: 0px; left: 0px;;"; onclick="location.href='https://www.google.com'";>Google</li>
+            <li style="color: green; position: fixed; top: 0px; left: 240px;;"; onclick="location.href='https://www.naver.com'">NAVER</li>
+            <li style="color: red; position: fixed; top: 0px; left: 480px;;"; onclick="location.href='https://www.youtube.com'">YouTube</li>
+            <li style="color: rgb(88, 0, 88); position: fixed; top: 0px; left: 740px;;"; onclick="location.href='https://www.gov.kr'">정부24</li>
+        </ul>
+    </div>
+</body>
+</html>
