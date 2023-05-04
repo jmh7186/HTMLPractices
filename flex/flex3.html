@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* 텍스트 오버플로우 발생 시 뒷부분을 ...으로 표시 */
+        }
+    </style>
+</head>
+<body>
+    <div style="border: 2px solid red; display: flexbox; width: 40%;">
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    </div>
+    <p>overflow-wrap: break-word (영어 강제 개행, 한글은 기본적으로 개행이 일어남)</p>
+    <div style="border: 2px solid red; display: flexbox; overflow-wrap: break-word;">
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    </div>
+    <p>white-space: nowrap (한글 개행 방지, 영어는 기본적으로 개행이 일어나지 않음)</p>
+    <div style="border: 2px solid red; display: flexbox; white-space: nowrap;">
+        ㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱ
+    </div>
+</body>
+</html>
