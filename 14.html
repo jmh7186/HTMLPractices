@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="border: 2px solid red";>test</div>
+    <p></p>
+    <div style="border: 2px solid goldenrod; width: 700px;height: 100px;";>test</div>
+    <p>%는 현재 창의 크기에 따라 크기가 결정되는 속성</p>
+    <div style="border: 2px solid yellow; width: 50%;height: 150px;";>test</div>
+    <p>div태그는 block 속성을 가지고 있음</p>
+    <div style="border: 2px solid green; width: 100%;height: 150px;";>
+        <div style="border: 2px solid blue; width: 50%;height: 20px;";>블루</div>
+        <div style="border: 2px solid rgb(0, 6, 94); width: 50%;height: 20px;";>다크블루</div>
+    </div>
+    <p>display에 따른 block의 위치를 확인하기</p>
+    <p>상위태그에 inline속성을 적용해도 하위태그는 영향받지 않음</p>
+    <p>inline 속성을 적용한 태그는 %가 적용되지 않음</p>
+    <p>%로 지정한 flex속성 태그의 하위태그는 50% + 50%, 100% + 100%의 크기가 같다(두 개일 경우에만)</p>
+    <div style="display: flex; border: 2px solid green; width: 100%;height: 150px;";>
+        <div style="border: 2px solid blue; width: 50%;height: 50px;";>블루</div>
+        <div style="border: 2px solid rgb(0, 6, 94); width: 50%;height: 50px;";>다크블루</div>
+    </div>
+    <p>내용물이 없으면 height속성의 %지정은 아무 영향을 주지 못함</p>
+    <div style="border: 2px solid violet; width: 100%;height: 200%;";>바이올렛</div>
+</body>
+</html>
