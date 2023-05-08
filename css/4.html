@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #alink {
+            color: coral;
+        }
+
+        a {
+            color: red;
+        }
+
+        div div a {
+            color: blue;
+        }
+
+        div>div>a {
+            color: black;
+        }
+
+        #first > div > a{
+            font-size: 20px;
+        }
+
+        /* div span a 순서일 경우 div a는 적용되지만 div > a는 적용되지 않음 */
+        div a{
+            font-size: 50px;
+            color: blueviolet;
+        }
+
+        /* >는 직접 적용 */
+        div > a{
+            font-size: 80px;
+        }
+        /* div div a 와 div>div>a 의 우선순위는 같음(마지막에 오는 것 적용) */
+
+        /* #first > div > a == #first a */
+    </style>
+</head>
+
+<body>
+    <div id="first">
+        <div><a href="https:www.naver.com" id="alink">네이버</a></div>
+    </div>
+    <div id="second">
+        <div><a href="https:www.google.com">구글</a></div>
+    </div>
+    <div class="test">
+        <div><a href="https:www.youtube.com">유튜브</a></div>
+    </div>
+    <div>
+        <div><a href="https:www.daum.net">다음</a></div>
+    </div>
+
+    <div id="first">
+        <span><a href="https:www.naver.com" id="alink">네이버</a></div>
+    </div>
+    <div id="second">
+        <span><a href="https:www.google.com">구글</a></span>
+    </div>
+    <div class="test">
+        <span><a href="https:www.youtube.com">유튜브</a></span>
+    </div>
+    <div>
+        <span><a href="https:www.daum.net">다음</a></span>
+    </div>
+    
+</body>
+
+</html>
