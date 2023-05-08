@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: black;
+        }
+        header{
+            background-color: yellow;
+            width: 800px;
+            height: 100px;
+        }
+
+        main{
+            background-color: grey;
+            display: flex;
+            width: 800px;
+            height: 400px;
+        }
+        footer{
+            background-color: burlywood;
+            width: 800px;
+            height: 100px;
+        }
+        main aside{
+            width: 200px;
+            height: inherit;
+            background-color: greenyellow;
+        }
+        main section{
+            width: 600px;
+            height: inherit;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        크게 header, main, footer 3영역으로 분리
+        모든 태그의 margin과 padding은 0으로 설정
+        각 영역의 크기 지정
+        main 영역은 inline 속성으로 설정
+        단, 한 영역 내 2개 이상의 개체가 들어갈 경우 flex속성으로 설정
+     -->
+    <header>HEADER</header>
+    <main>
+        <aside>ASIDE</aside>
+        <section>SECTION</section>
+    </main>
+    <footer>FOOTER</footer>
+</body>
+</html>
