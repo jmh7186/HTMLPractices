@@ -113,7 +113,7 @@
         #middle{
             width: 100%;
             height: 600px;
-            display: inline-flex;
+            display: flex;
         }
 
         aside {
@@ -130,7 +130,13 @@
             width: 100%;
             height: 150px;
             background-color: antiquewhite;
-            line-height: 30px;
+            
+        }
+        footer > p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 35px;
         }
     </style>
 </head>
@@ -176,10 +182,10 @@
             </main>
         </div>
         <footer>
-            주식회사 어쩌구저쩌구<br>
-            사업자 등록번호 : 000-0000-0000 | 대표 : 김아무개<br>
-            00000 서울특별시 어쩌구 어쩔동<br>
-            고객센터 : 02-000-0000
+            <p>주식회사 어쩌구저쩌구</p>
+            <p>사업자 등록번호 : 000-0000-0000 | 대표 : 김아무개</p>
+            <p>00000 서울특별시 어쩌구 어쩔동</p>
+            <p>고객센터 : 02-000-0000</p>
         </footer>
     </div>
 </body>
