@@ -25,13 +25,19 @@
             background-color: tan;
         }
     </style>
+    <script>
+        function mainChange(page){
+            window.parent.document.querySelector("#main").src=page;
+        }
+    </script>
 </head>
 
 <body>
 
     <ul id="index">
         <h1>회사소개</h1>
-        <li>CEO</li>
+        <br>
+        <li onclick="mainChange('CEO.html')">CEO</li>
         <li>회사현황</li>
         <li>연혁</li>
         <li>인재채용</li>
