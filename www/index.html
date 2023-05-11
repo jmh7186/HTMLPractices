@@ -133,6 +133,15 @@
             line-height: 35px;
         }
     </style>
+    <script>
+        function asideChange(page){
+            document.querySelector("#aside").src=page;
+        }
+
+        function mainChange(page){
+            document.querySelector("#main").src=page;
+        }
+    </script>
 </head>
 
 <body>
@@ -140,24 +149,24 @@
         <nav class="navbar">
             <div class="navbar_logo" onclick="location.href='index.html'"><i class="fab fa-accusoft"></i></div>
             <ul class="navbar_menu">
-                <li onclick="location.href='company.html'">회사소개</li>
-                <li onclick="location.href='info.html'">사업안내</li>
-                <li onclick="location.href='reservation.html'">예약안내</li>
-                <li onclick="location.href='gallary.html'">갤러리</li>
-                <li onclick="location.href='board.html'">게시판</li>
+                <li onclick="asideChange('company.html')">회사소개</li>
+                <li onclick="asideChange('info.html')">사업안내</li>
+                <li onclick="asideChange('reservation.html')">예약안내</li>
+                <li onclick="asideChange('gallary.html')">갤러리</li>
+                <li onclick="asideChange('board.html')">게시판</li>
             </ul>
             <ul class="navbar_icon">
                 <li><i class="fas fa-camera"></i></li>
                 <li><i class="fas fa-envelope"></i></li>
-                <li onclick="location.href='login.html'"><i class="fas fa-user-plus"></i></li>
+                <li onclick="mainChange('login.html')"><i class="fas fa-user-plus"></i></li>
             </ul>
             <a class="navbar_toogleBtn" href="#">
                 <i class="fas fa-bars"></i>
             </a>
         </nav>
         <div id="middle">
-            <aside></aside>
-            <main><h1 style="text-align: center;">사이트 공사중</h1></main>
+            <aside><iframe id=aside src="" frameborder="0" width="100%" height="600px"></iframe></aside>
+            <main><iframe id=main src="" frameborder="0" width="100%" height="600px"></iframe></main>
         </div>
         <footer>
             <p>주식회사 어쩌구저쩌구</p>
