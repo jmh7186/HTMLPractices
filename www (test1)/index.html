@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>P O R T F O L I O</title>
     <style>
         *{
             margin: 0 auto;
@@ -15,25 +15,25 @@
         }
 
         body{
-            min-width: 700px;
+            min-width: 750px;
         }
         header{
             width: 100%;
-            border: 1px solid black;
+            display: flex;
+            justify-content: space-between;
         }
         #logo{
-            margin: 20px;
+            padding: 20px;
         }
         #loginbtn{
-            float: right;
             font-size: 20px;
-            margin-right: 20px;
-            margin-top: 50px;
+            /* margin-right: 20px; */
+            margin-top: 60px;
             border: 2px solid black;
             font-weight: bolder;
-            padding-left: 20px;
-            padding-right: 20px;
             padding: 5px;
+            position: relative;
+            bottom: 15px;
         }
         #loginbtn:hover{
             background-color: rgb(197, 192, 241);
@@ -71,18 +71,17 @@
         }
         aside{
             height: 700px;
-            min-width: 30%;
+            width: 30%;
             float: left;
-            font-size: 20px;
         }
         aside > ul{
             text-align: center;
             list-style-type: none;
-            margin-top: 50px;
+            margin-top: 30px;
         }
         aside > ul > li{
-            font-size: 30px;
-            line-height: 100px;
+            font-size: 20px;
+            line-height: 50px;
         }
         aside > ul > h1{
             font-size: 40px;
@@ -96,11 +95,17 @@
         footer{
             background-color: rgb(199, 214, 255);
             height: 100px;
-            font-size: 35px;
-            border: 1px solid black;
+            font-size: 30px;
+            line-height: 100px;
         }
         footer > div{
             border: 1px solid rgb(199, 214, 255);
+            text-align: center;
+        }
+        #title{
+            line-height: 50px;
+            font-size: 20px;
+            font-weight: bolder;
             text-align: center;
         }
     </style>
@@ -109,6 +114,7 @@
 <body>
     <header>
         <img id="logo" src="logo.png" alt="" onclick="location.href='index.html'">
+        <div id="title">P O R T F O L I O<br>Designd by Jo</div>
         <div id="loginbtn" onclick="pageChange('login.html','main')">LOG IN</div>
     </header>
     <nav>

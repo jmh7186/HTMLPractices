@@ -13,21 +13,28 @@
         input{
             font-size: 20px;
         }
-        #logindiv{
+        #loginform{
             display: flex;
             justify-content: space-between;
+        }
+        #loginform > ul > li > input{
+            background-color: white; 
+        }
+        #loginform > ul > li > input:hover{
+            background-color: rgb(197, 192, 241);
         }
     </style>
 </head>
 <body>
-    <div id="logindiv" style="padding-top: 50px;">
+    <img style="margin-top: 50px;" src="mainlogo.png" alt="">
+    <form action="loginrequest.html" id="loginform" style="padding-top: 50px;">
         <ul id='loginul' style="list-style-type: none;">
             <li><h1>LOG IN</h1></li>
-            <li>ID&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text"></li>
-            <li>PASSWORD <input type="text"></li>
-            <li><input id="btn" type="submit" value="ENTER" style="background-color: white; padding: 10px; font-size: 20px;"></li>
-            <li><span onclick="pageChange('signup.html','main')">Sign Up</span> | <span onclick="pageChange('forgot.html','main')">Forgot ID / PASSWORD</span></li>
+            <li>ID&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="id" id="id"></li>
+            <li>PASSWORD <input type="password" name="password" id="password"></li>
+            <li><input type="submit" value="ENTER" style="padding: 10px; font-size: 20px;"></li>
+            <li><span onclick="pageChange('signup.html','main')">Sign up</span> | <span onclick="pageChange('forgot.html','main')">Forgot ID / PASSWORD</span></li>
         </ul>
-    </div>
+    </form>
 </body>
 </html>
