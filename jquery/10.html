@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.0.js"></script>
+    <script>
+        $(function () {
+            //css 변경 (속성 값 직접변경, 여기서 설정 시 기존 값이 초기화되고 덮어짐=모든 설정을 여기에 써야 함 )
+            // $("div").attr("style","background-color:green;width: 200px; height: 200px;");
+
+            //css 함수 사용, 기존 값도 그대로 유지하고 정해진 값만 변경
+            //css 함수는 css, js 속성 모두 사용 가능
+            $("div").css("background-color","blue");
+            $("div").css("backgroundColor","red"); //우선순위는 마지막 함수에 따름
+            $("div").css({"color":"white","font-size":"30px","background-color":"orange"}); //json 형태로 여러 속성을 줄 수도 있다.
+        });
+    </script>
+    <style>
+        /* style의 우선순위 : 스크립트 > 태그 style 옵션 > style 태그 */
+        /* 태그 내의 우선순위 : cid > cdiv > div */
+        /* div {
+            background-color: aqua;
+        }
+        #cid {
+            background-color: red;
+        }
+        .cdiv {
+            background-color: gray;
+        } */
+    </style>
+</head>
+<body>
+    <div class="cdiv" id="cid" style="width: 200px; height: 200px;">Hello jQuery</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.0.js"></script>
+    <script>
+        $(function () {
+            $("#remove").click(function () {
+                $("div").remove(); //태그 자체를 삭제함
+            });
+            $("#removeVal").click(function () {
+                $("div").empty(); //태그의 값을 비움
+            });
+        });
+    </script>
+</head>
+<body>
+    <div style="width: 300px; height: 200px; background-color: aqua;">JavaScript</div>
+    <button id="remove">태그 제거</button>
+    <button id="removeVal">태그 값 제거</button>
+</body>
+</html>

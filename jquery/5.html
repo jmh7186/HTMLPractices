@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.0.js"></script>
+    <script>
+        //HTML의 값은 태그와 태그 사이, value 두 가지 형태
+        $(function () {
+            alert($("input").val()); //input tag의 value 받아오기
+            alert($("button").text()); //button tag의 태그와 태그 사이의 값 받아오기 ex) 버튼
+            alert($("button").html()); //차이점: 태그 안의 태그까지 읽어온다. ex) <b>버튼</b>
+            $("input").val("new Value"); //값을 설정하는 함수로서의 기능도 있다.
+            $("button").text("new Button");
+        });
+    </script>
+</head>
+<body>
+    <input type="text" value="인풋 상자">
+    <button><b>버튼</b></button>
+</body>
+</html>

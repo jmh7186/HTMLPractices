@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.js"></script> -->
+    <script src="jquery-3.7.0.js"></script>
+    <script>
+        //일반적인 자바스크립트
+        // function hide(){
+        //     document.querySelector("p").innerHTML="";
+        // }
+
+        //jquery 사용하기
+        // $(document).ready(
+        //     function () {
+        //         $("p").click(
+        //             function () {
+        //                 $(this).hide();
+        //             }
+        //         );
+        //     }
+        // );
+
+        // $(document).ready(
+        //     function () {
+        //         //jquery의 기본 구조
+        //         //대부분이 이벤트 기반 처리
+
+        //     }
+        // );
+
+        //위 구조의 단순화
+        $(function (){
+            $("p").click(function () {
+                $(this).hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Click Here</p>
+    <p>Click Here</p>
+    <p>Click Here</p>
+    <p>Click Here</p>
+    <p>Click Here</p>
+</body>
+</html>

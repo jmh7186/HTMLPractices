@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.0.js"></script>
+    </script>
+    <style>
+        .h {
+            color: red;
+        }
+        
+        #h1 {
+            background-color: aquamarine;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("h1,h2,h3").addClass("h");
+            $("h1,h2,h3").attr("id","h1");
+            $("button").click(function () {
+                val=$(this).text();
+                if(val=="클래스 해제"){
+                    $("h1,h2").removeClass();
+                }else if(val=="id 해제"){
+                    $("h1,h2").removeAttr("id");
+                }else if(val=="클래스 토글"){
+                    $("h1,h2").toggleClass("h");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>heading1</h1>
+    <h2>heading2</h2>
+    <h3>heading3</h3>
+    <button>클래스 해제</button>
+    <button>id 해제</button>
+    <button>클래스 토글</button>
+</body>
+</html>

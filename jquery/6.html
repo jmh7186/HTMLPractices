@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.0.js"></script>
+    <script>
+        $(function () {
+            //문제. item1의 바로 뒤에 item 1-1을 추가하시오.
+            $("#exec1").click(function () {
+                $("#item1").append("<p>item 1-1</p>");
+            });
+            //문제. item1의 바로 앞에 item 0을 추가하시오.
+            $("#exec2").click(function () {
+                $("#item1").prepend("<p>item 0</p>");
+            });
+            //after, before 함수
+            $("#exec3").click(function () {
+                $("#item3").after("<p>item 3-1</p>");
+            });
+            $("#exec4").click(function () {
+                $("#item3").before("<p>item 3-0</p>");
+            });
+            //after, before 함수는 해당 태그의 다음 태그를 만들어 요소를 삽입하지만, (태그 밖으로 벗어남)
+            //append, prepend 태그는 해당 태그 내 요소의 끝에 삽입한다는 차이가 있다. (태그 밖으로 벗어나지 않음)
+            $("input:button").click(function () {
+                $("#p").after("<br>"+$("#maininput").val());
+                // alert($("#maininput").val())
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id="item1">item1</p>
+    <p>item2</p>
+    <p id="item3">item3</pㅑ>
+    <p>item4</p>
+    <button id="exec1">exec1</button>
+    <button id="exec2">exec2</button>
+    <button id="exec3">exec3</button>
+    <button id="exec4">exec4</button>
+    <h1>가족관계입력란</h1>
+    <input id="maininput" type="text"><br>
+    <p id="p"></p>
+    <input type="button" value="추가">
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.0.js"></script>
+    <script>
+        $(function () {
+            //alert($(window).width()+','+$(window).height()); //879,598
+            //alert($("html").width()+','+$("html").height()); //879,137
+            //alert($("body").width()+','+$("body").height()); //763,21
+            //alert($("body").innerWidth()+','+$("body").innerHeight()); //763,21
+            //alert($("body").outerWidth()+','+$("body").outerHeight()); //863,121
+            //alert($("body").outerWidth(true)+','+$("body").outerHeight(true)); //879,137
+
+            // if($(window).innerWidth()>700){
+            //     $("body").css("background-color","rgb(160, 253, 241)");
+            // }else {
+            //     $("body").css("background-color","orange");
+            // }
+
+            $(window).resize(function () {
+                if($(window).innerWidth()>700){
+                    $("body").css("background-color","rgb(160, 253, 241)");
+                }else {
+                    $("body").css("background-color","orange");
+                }
+            }).resize();
+            
+        });
+    </script>
+    <style>
+        body{
+            border: 50px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    Hi.
+</body>
+
+</html>

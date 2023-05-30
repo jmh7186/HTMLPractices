@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.0.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        #main, #sub {
+            font-size: 18px;
+            text-align: center;
+            background-color: rgb(168, 168, 168);
+            columns: white;
+            border: 1px solid black;
+        }
+        #sub {
+            display: none;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#main").click(function () {
+                $("#sub").slideToggle(1000);
+            });
+            $("#stop").click(function () {
+                $("#sub").stop();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="main">MAIN MENU</div>
+    <div id="sub">
+        <ul>
+            <li>SUB MENU1</li>
+            <li>SUB MENU2</li>
+            <li>SUB MENU3</li>
+        </ul>
+    </div>
+    <button id="stop">Stop Btn</button>
+</body>
+</html>
