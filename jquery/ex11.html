@@ -12,9 +12,20 @@
             //alert($("body").width()); //963
             //alert($("html").width()); //963
             //alert($("div").width()); //963
-            
+
             //전체 div 갯수(페이지 수)
             //alert($(".content").length); //5
+            //alert($(window).height());
+
+            //페이지의 가로세로
+            pageheight=$(window).height();
+            pagewidth=$("div").width();
+            
+            //페이지 수
+            totalpage=$(".content").length;
+
+            //div의 크기를 설정
+            $(".content").css({"width":pagewidth,"height":pageheight});
         });
     </script>
     <style>
