@@ -10697,8 +10697,6 @@
 		window.jQuery = window.$ = jQuery;
 	}
 
-dㅑ
-
 
 	return jQuery;
 });

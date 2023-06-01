@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.js"></script>
+    <script>
+        $(function () {
+            //input 타입 지정
+            // $("input:text").click(function () {
+            //     $(this).val('textbox');
+            // });
+            // $("input[type=text]").click(function () {
+            //     $(this).val('textbox 2');
+            // });
+            // $("input:button").click(function () {
+            //     $(this).val('button');
+            // });
+            // $("input:checkbox").click(function () {
+            //     alert('체크됨');
+            // });
+
+            //요소 자식 지정(순서)
+            $("li:nth-child(3)").click(function () {
+                alert('Test');
+            });
+            //홀수 지정
+            // $("li:odd").css("background-color","gray");
+            //짝수 지정
+            $("li:even").css("background-color","gray");
+            //첫번째 지정
+            $("li:first").css("background-color","green");
+            //마지막 지정
+            $("li:last").css("background-color","yellow");
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li><input type="text" name="" id=""></li>
+        <li><input type="button" value=""></li>
+        <li><input type="checkbox" name="" id=""></li>
+    </ul>
+</body>
+</html>
