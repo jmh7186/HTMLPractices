@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.js"></script>
+    <style>
+        .prev {
+            cursor: pointer;
+            font-size: 30px;
+            user-select: none;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            border: 1px solid #717171;
+        }
+
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img class="fade" src="img1.jpg" style="width:100%">
+    <a class="prev">&#10094;</a>
+    <div style="text-align:center">
+        <span class="dot" onmouseover="currentSlide(1)"></span>
+        <span class="dot" onmouseover="currentSlide(2)"></span>
+        <span class="dot" onmouseover="currentSlide(3)"></span>
+        <span class="dot" onmouseover="currentSlide(4)"></span>
+    </div>
+</body>
+<script>
+    function currentSlide(num) {
+        document.querySelector("img").src = `img${num}.jpg`;
+        // $(function () {
+        //     $("img").attr('src',`img${num}.jpg`);
+        // });
+    }
+    // $(function () {
+    //     $(".dot").mouseover(function () {
+    //         $("img").attr('src',`img4.jpg`);
+    //     });
+    // });
+</script>
+
+</html>

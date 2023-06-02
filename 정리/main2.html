@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.js"></script>
+    <script>
+        $(function () {
+            $(".submenu").slideUp(0);
+            $(".menu > li").mouseover(function () {
+                $(".submenu").slideDown(100);
+            });
+            $("nav").mouseleave(function () {
+                $(".submenu").slideUp(100);
+            });
+        });
+    </script>   
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+        }
+        nav>.menu{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            font-size: 30px;
+            height: 50px;
+        }
+        nav>.menu>li{
+            white-space: nowrap;
+            overflow: hidden;
+            width: 195px;
+        }
+        .menu>li:hover{
+            font-weight: bold;
+            border-bottom: solid 3px orange;
+        }
+        main {
+            background-color: aqua;
+            height: 500px;
+            margin-top: 50px;
+        }
+        .submenu{
+            background-color: aquamarine;
+            font-size: 20px;
+            text-align: center;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li>Company</li>
+            <li>Business</li>
+            <li>Sustainability</li>
+            <li>Relation</li>
+        </ul>
+        <ul class="submenu">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </nav>
+    <main>
+        main
+    </main>
+</body>
+</html>

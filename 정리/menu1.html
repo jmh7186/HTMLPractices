@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.js"></script>
+    <script>
+        $(function () {
+            $(".submenu",$(this)).slideUp(0);
+            $(".mainmenu > li").mouseover(function () {
+                $(".submenu",$(this)).slideDown(100);
+            });
+            $(".mainmenu > li").mouseleave(function () {
+                $(".submenu",$(this)).slideUp(100);
+            });
+        });
+    </script>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: black;
+            color: white;
+            font-size: 12px;
+        }
+
+        ul {
+            border: 1px solid red;
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+        
+        li{
+            border: 1px solid orange;
+        }
+
+        .submenu{
+            display: block;
+        }
+
+        li:hover{
+
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="mainmenu">
+            <li>MENU1
+                <ul class="submenu">
+                    <li>SUB-MENU1</li>
+                    <li>SUB-MENU2</li>
+                    <li>SUB-MENU3</li>
+                </ul>
+            </li>
+            <li>MENU2
+                <ul class="submenu">
+                    <li>SUB-MENU1</li>
+                    <li>SUB-MENU2</li>
+                    <li>SUB-MENU3</li>
+                </ul>
+            </li>
+            <li>MENU3
+                <ul class="submenu">
+                    <li>SUB-MENU1</li>
+                    <li>SUB-MENU2</li>
+                    <li>SUB-MENU3</li>
+                </ul>
+            </li>
+            <li>MENU4
+                <ul class="submenu">
+                    <li>SUB-MENU1</li>
+                    <li>SUB-MENU2</li>
+                    <li>SUB-MENU3</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main></main>
+</body>
+</html>
