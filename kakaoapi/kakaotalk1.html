@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/v1/kakao.min.js"></script>
+</head>
+<body>
+    <a href="javascript:kakaologin()"><img src="kakao_login_medium_narrow.png" alt=""></a>
+    <button onclick="sendToMe()">나에게 보내기</button>
+</body>
+<script>
+    Kakao.init('8b9fff63b03fbd71b7d14a02a31a44a0');
+    Kakao.isInitialized();
+    function kakaologin() {
+        Kakao.Auth.login({
+            success: function (response) {
+                Kakao.API.request({
+                    url: '/v2/user/me',
+                    success: function (response) {
+                        console.log(response);
+                    },
+                    fail: function (err) {
+                        console.log(err);
+                    },
+                });
+            },
+            fail: function (err) {
+                console.log(err);
+            }
+        });
+    }
+    function sendToMe() {
+    Kakao.API.request({
+      url: '/v2/api/talk/memo/default/send',
+      data: {
+        template_object: {
+          object_type: 'text',
+          text:
+            'Hello Kakao JS',
+          link: {
+            // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
+            mobile_web_url: 'https://developers.kakao.com',
+            web_url: 'https://developers.kakao.com',
+          },
+        },
+      },
+    })
+      .then(function(res) {
+        
+      })
+      .catch(function(err) {
+        alert('error: ' + JSON.stringify(err));
+      });
+  }
+
+</script>
+</html>

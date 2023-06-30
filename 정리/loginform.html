@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            max-width: 1050px;
+            min-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        header {
+            height: 50px;
+            padding: 10px;
+        }
+
+        header>ul>li {
+            display: inline;
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin: 5px;
+        }
+
+        header>ul {
+            float: right;
+            list-style: none;
+        }
+
+        header>p {
+            float: left;
+        }
+
+        nav {}
+
+        nav>ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+        }
+
+        nav>ul>li {
+            display: inline-block;
+            padding: 8px 25px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        #bannerimg {
+            margin-top: 10px;
+            background-image: url('img1.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 200px;
+        }
+
+        #main {
+            text-align: center;
+            height: 1000px;
+        }
+
+        #main>article {
+            border: 1px solid green;
+            width: 300px;
+            height: 200px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        #banner {
+            border: 1px solid black;
+            width: 95%;
+            height: 50px;
+            display: inline-block;
+        }
+
+        footer {
+            border: 1px solid black;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        #loginform {
+            display: inline-block;
+            border: 1px solid gray;
+            border-radius: 10px;
+            padding: 50px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #loginform ul {
+            list-style: none;
+            float: left;
+            clear: both;
+        }
+
+        #loginform input[type=text],
+        #loginform input[type=password] {
+            height: 30px;
+            width: 200px;
+            border: 1px solid gray;
+            font-size: 20px;
+        }
+
+        #loginform input[type=submit] {
+            width: 64px;
+            height: 64px;
+            margin-left: 10px;
+            font-size: 15px;
+            background-color: orange;
+            border: none;
+        }
+
+        #loginform h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        function pageChange(page, path) {
+            xhttp = new XMLHttpRequest();
+            xhttp.open("get", path);
+            xhttp.send();
+            xhttp.onreadystatechange = function () {
+                document.querySelector(page).innerHTML = this.responseText;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <header>
+            <p>회사명과 로고</p>
+            <ul>
+                <li>사이트맵</li>
+                <li onclick="location.href='2.html'">홈</li>
+                <li onclick="location.href='loginform.html'">로그인</li>
+                <li>회원가입</li>
+                <li style="border: none;"><input type="search" name="" id="" placeholder="Search..."></li>
+            </ul>
+        </header>
+        <nav>
+            <ul>
+                <li>MENU</li>
+                <li>MENU</li>
+                <li>MENU</li>
+                <li>MENU</li>
+                <li>MENU</li>
+                <li>MENU</li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        <section id="bannerimg"></section>
+        <section id="main">
+            <div id="loginform">
+                <h1>로그인</h1>
+                <form action="">
+                    <ul>
+                        <li><input type="text" id="id" name="id"></li>
+                        <li><input type="password" id="pwd" name="pwd"></li>
+                    </ul>
+                    <input type="submit" value="로그인">
+                </form>
+            </div>
+        </section>
+    </div>
+    <footer>Copyrightⓒ2023</footer>
+</body>
+
+</html>
